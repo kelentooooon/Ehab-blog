@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Post } from "@/app/lib/interface";
 import { client } from "@/app/lib/sanity";
 import { urlFor } from "@/app/lib/sanityImageUrl";
@@ -21,7 +22,7 @@ export default async function SlugPage({
 
   const PortableTextComponent = {
     types: {
-      image: ({ value }: { value: never }) => (
+      image: ({ value }: { value: any }) => (
         <Image
           src={urlFor(value).url()}
           alt="Image"

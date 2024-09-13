@@ -3,6 +3,7 @@ import { client } from "./sanity";
 
 const builder = ImageUrlBuilder(client);
 
-export function urlFor(source: never) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function urlFor(source: any) {
   return builder.image(source);
 }
