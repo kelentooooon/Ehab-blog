@@ -21,7 +21,7 @@ export default async function SlugPage({
 
   const PortableTextComponent = {
     types: {
-      image: ({ value }: { value: any }) => (
+      image: ({ value }: { value: never }) => (
         <Image
           src={urlFor(value).url()}
           alt="Image"
